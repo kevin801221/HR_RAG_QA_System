@@ -3,7 +3,8 @@
 基於 LLM 的智能人力資源法規諮詢系統，整合了 KDB.AI 向量數據庫、Cohere 重排序和 Gradio 介面，提供高效的文件處理和精確的法規諮詢服務。
 
 ## 環境需求
-
+可以先創立虛擬環境 python -m venv venv
+source ./venv/bin/activate
 ### Requirements.txt
 ```txt
 llama-index
@@ -22,6 +23,10 @@ nest-asyncio
 python-dotenv
 ```
 
+command 安裝所有需要的packages
+```bash
+pip install -r requirements.txt
+```
 ## 環境變量配置
 
 創建 `.env` 文件，需要包含以下配置：
