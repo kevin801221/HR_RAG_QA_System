@@ -157,6 +157,12 @@ python main.py
 2. **數據保護**:
    - 實現數據加密存儲
    - 添加訪問控制
+### 測試結果截圖，可以設置基本系統初始化和上傳多個PDF文件進行RAG準備。
+
+![image](https://github.com/user-attachments/assets/2767bb48-67fb-46e8-a5aa-f41b02c4a528)
+
+### 檢索之後畫面
+![image](https://github.com/user-attachments/assets/43e0af14-21b8-4481-92db-82c19a475c3d)
 
 ## License
 
