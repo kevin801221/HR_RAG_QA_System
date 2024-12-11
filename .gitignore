@@ -70,4 +70,4 @@ docker-compose.override.yml
 *.tsv
 
 # 記錄您當前不想追蹤的其他文件
-your_custom_folder/
+your_custom_folder/.env
