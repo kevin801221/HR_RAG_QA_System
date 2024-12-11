@@ -67,19 +67,21 @@ KDBAI_API_KEY=your_kdbai_key
 ### 建議專案結構
 ```
 project/
-├── .env
-├── requirements.txt
+├── .env                    # 環境變量配置
+├── .env.example           # 環境變量範例
+├── requirements.txt       # 依賴包列表
+├── main.py               # 主程序入口
 ├── config/
 │   ├── __init__.py
-│   └── settings.py          # 統一配置管理
+│   └── settings.py       # 統一配置管理
 ├── core/
 │   ├── __init__.py
-│   ├── models.py           # 模型初始化
-│   ├── database.py         # 數據庫管理
-│   └── parser.py           # 文檔解析
+│   ├── models.py        # 模型初始化
+│   ├── database.py      # 數據庫管理
+│   └── parser.py        # 文檔解析
 ├── services/
 │   ├── __init__.py
-│   └── hr_system.py        # 核心業務邏輯
+│   └── hr_system.py     # 核心業務邏輯
 └── ui/
     ├── __init__.py
     └── gradio_interface.py # UI 實現
@@ -101,7 +103,7 @@ cp .env.example .env
 ```bash
 python main.py
 ```
-
+    
 ### 3. 使用介面
 
 系統提供兩個主要頁面：
@@ -116,6 +118,22 @@ python main.py
 1. 輸入問題
 2. 獲取智能回答及法規依據
 
+### 4.啟動後的使用流程：
+
+    打開 Gradio 介面後，進入「系統設置」頁面
+    點擊「初始化系統」按鈕
+    上傳你的 PDF 文件（可以是人資相關的規章制度、法規等）
+    點擊「處理文件」按鈕，等待系統處理完成
+    切換到「諮詢系統」頁面
+    開始輸入問題進行諮詢
+
+    系統會：
+
+    解析上傳的 PDF 文件
+    將內容向量化存入 KDB.AI
+    使用 Cohere 進行重排序
+    透過 GPT-4 生成回答
+    
 ## 性能優化建議
 
 1. **異步處理**:
