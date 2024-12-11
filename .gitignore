@@ -41,7 +41,8 @@ __pycache__/
 *.pyd
 *.venv/
 venv/
-
+vevn/
+*.vevn/
 # 依賴關係
 *.bak
 *.orig
